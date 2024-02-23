@@ -1,0 +1,163 @@
+
+/*Header*/
+header{
+    position: relative;
+    background-color: pink;
+}
+
+/*Navbar*/
+#navbar{
+    width: 100%;
+    max-width: 1800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-family: "Raleway", sans-serif;
+}
+
+#navbar li{
+    list-style: none;
+}
+
+#navbar a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
+}
+
+#navbar ul li a:hover{
+    color: white;
+    transition: all 0.25s ease;
+}
+
+/*Nav logo*/
+#nav-logo a{
+    font-size: 2.8rem;
+    font-weight: bold;
+    font-family: "Playfair Display", serif;
+}
+
+#nav-logo a:hover{
+    color: rgb(167, 148, 43);
+    transition: all 0.25s ease;
+}
+
+#nav-logo p{
+    font-size: 1.5rem;
+}
+
+#nav-logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+
+/*Navbar list*/
+#nav-list{
+    display: flex;
+    flex-direction: row;    
+    justify-content: center;
+}
+
+#nav-list a{
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+}
+
+
+/*Nav User*/
+#nav-user{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem;
+}
+
+.user-btn{
+    background-color: rgba(0,0,0,0);
+    height: 3.5rem;
+    border-radius: 15px;
+    padding: .5rem
+}
+
+.user-btn svg{
+    margin-right: 1rem;
+}
+
+.user-btn:hover{
+    background-color: white;
+    transition: all 0.5s ease;
+}
+
+/*Dropdown menu btn*/
+#nav-dropdown-btn{
+    display: none;
+}
+
+#nav-dropdown-btn button{
+    background-color: rgba(0,0,0,0);
+    border-radius: 10px;
+    height: 3.5rem;
+    width: 4rem;
+    margin-left: 1rem;
+}
+
+#nav-dropdown-btn button:hover{
+    background-color: white;
+}
+
+
+/*Responsive*/
+@media(max-width:992px){
+    #navbar #nav-list{
+        display: none;
+    }
+
+    #nav-dropdown-btn{
+        display: block;
+    }
+}
+
+/*Dropdown menu*/
+.nav-menu-container{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    top: 9.6rem;
+    left: 0px;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.15s ease-out;
+}
+
+#nav-dropdown-menu{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0,0,0,0.1);
+    align-items: center;
+    width: 100%;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 2rem;
+    backdrop-filter: blur(15px);
+}
+
+#nav-dropdown-menu a{
+    padding: .2rem;
+}
+
+#nav-dropdown-menu a:hover{
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.nav-menu-container.open{
+    max-height: 11.2rem;
+    transition: max-height 0.5s ease-in;
+}
+
+/**/
